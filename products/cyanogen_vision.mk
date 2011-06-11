@@ -2,10 +2,10 @@
 $(call inherit-product, device/htc/vision/vision.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
@@ -23,7 +23,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_vision BUILD_ID=FRF91 BUILD_DIS
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_vision_defconfig
 
 # Extra Vision overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/vision
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/vision
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -32,21 +32,21 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_PACKAGES += GanOptimizer
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-vision
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-vision
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-vision
+            ro.modversion=pffmod-7.1.0-RC0-vision
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-vision-KANG
+            ro.modversion=pffmod-7.1.0-RC0-vision-KANG
     endif
 endif
 
@@ -54,4 +54,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

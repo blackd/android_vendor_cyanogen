@@ -2,10 +2,10 @@
 $(call inherit-product, device/htc/desirec/device_desirec.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Inherit apns list from common
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
@@ -21,7 +21,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRI40 BUILD_DISPLAY_ID=GRJ22 BUILD_FING
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=device/htc/desirec/kernel
 
 # Extra overlay for Gallery3D orientation hack
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/heroc
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/heroc
 
 # Enable Windows Media
 WITH_WINDOWS_MEDIA := true
@@ -30,14 +30,14 @@ WITH_WINDOWS_MEDIA := true
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Eris
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Eris
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Eris
+            ro.modversion=pffmod-7.1.0-RC0-Eris
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-KANG-Eris
+            ro.modversion=pffmod-7.1.0-RC0-KANG-Eris
     endif
 endif
 
@@ -45,4 +45,4 @@ endif
 # Copy dream/sapphire specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip

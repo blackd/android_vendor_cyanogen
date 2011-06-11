@@ -2,7 +2,7 @@
 $(call inherit-product, device/htc/bravoc/full_bravoc.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
@@ -20,7 +20,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
 PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_bravoc_defconfig
 
 # Extra Bravo (CDMA/GSM) overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/bravo
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/bravo
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -30,14 +30,14 @@ PRODUCT_PACKAGES += Torch
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-BravoC
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-BravoC
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-BravoC
+            ro.modversion=pffmod-7.1.0-RC0-BravoC
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-BravoC-KANG
+            ro.modversion=pffmod-7.1.0-RC0-BravoC-KANG
     endif
 endif
 
@@ -45,4 +45,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

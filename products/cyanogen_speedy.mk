@@ -2,10 +2,10 @@
 $(call inherit-product, device/htc/speedy/speedy.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Inherit WiMAX stuff
-$(call inherit-product, vendor/cyanogen/products/wimax.mk)
+$(call inherit-product, vendor/pffmod/products/wimax.mk)
 
 #
 # Setup device specific product configuration.
@@ -23,27 +23,27 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=GRJ22 PRODUCT_NA
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_speedy_defconfig
 
 # Extra Supersonic overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/speedy
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/speedy
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Speedy
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Speedy
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Speedy
+            ro.modversion=pffmod-7.1.0-RC0-Speedy
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Speedy-KANG
+            ro.modversion=pffmod-7.1.0-RC0-Speedy-KANG
     endif
 endif
 
@@ -51,4 +51,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

@@ -2,7 +2,7 @@
 $(call inherit-product, device/htc/mecha/device_mecha.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
@@ -15,7 +15,7 @@ PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_mecha BUILD_ID=FRG83D BUILD_DISPLAY_ID=GRJ22 BUILD_FINGERPRINT=verizon_wwe/htc_mecha/mecha/mecha:2.2.1/FRG83D/338893:user/release-keys PRIVATE_BUILD_DESC="1.12.605.6 CL338893 release-keys"
 
 # Extra Mecha overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mecha
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/mecha
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_PACKAGES += AicBootFix
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 # SIM Toolkit
 PRODUCT_PACKAGES += Stk
@@ -34,14 +34,14 @@ PRODUCT_PACKAGES += Stk
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Thunderbolt
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Thunderbolt
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Thunderbolt
+            ro.modversion=pffmod-7.1.0-RC0-Thunderbolt
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Thunderbolt-KANG
+            ro.modversion=pffmod-7.1.0-RC0-Thunderbolt-KANG
     endif
 endif
 
@@ -49,4 +49,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

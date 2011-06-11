@@ -2,13 +2,13 @@
 $(call inherit-product, device/htc/click/click.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/ti_fm_radio.mk)
 
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=device/htc/click/kernel
@@ -27,24 +27,24 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_click BUILD_ID=GRI40 BUILD_DISP
 PRODUCT_LOCALES += ldpi mdpi
 
 # Extra Passion overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/ldpi
 
 # Boot animation
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-click
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-click
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-click
+            ro.modversion=pffmod-7.1.0-RC0-click
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-click-KANG
+            ro.modversion=pffmod-7.1.0-RC0-click-KANG
     endif
 endif

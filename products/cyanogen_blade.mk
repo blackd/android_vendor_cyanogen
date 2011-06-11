@@ -2,10 +2,10 @@
 $(call inherit-product, device/zte/blade/device_blade.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
@@ -22,14 +22,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=cyanogen_blade BUILD_ID=FRG83 BUILD
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Blade
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Blade
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Blade
+            ro.modversion=pffmod-7.1.0-RC0-Blade
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Blade-KANG
+            ro.modversion=pffmod-7.1.0-RC0-Blade-KANG
     endif
 endif
 
@@ -37,4 +37,4 @@ endif
 # Copy legend specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

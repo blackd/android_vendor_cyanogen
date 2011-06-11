@@ -2,10 +2,10 @@
 $(call inherit-product, device/samsung/vibrantmtd/full_vibrantmtd.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
@@ -23,7 +23,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=soju BUILD_ID=GRJ22 BUILD_DISPLAY_I
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_vibrantmtd_defconfig
 
 # Extra galaxys overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/vibrantmtd
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/vibrantmtd
 
 # Add the FM app
 # PRODUCT_PACKAGES += FM
@@ -43,14 +43,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Vibrant
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Vibrant
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-Vibrant
+            ro.modversion=pffmod-7.1.0-Vibrant
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-Vibrant-KANG
+            ro.modversion=pffmod-7.1.0-Vibrant-KANG
     endif
 endif
 
@@ -58,4 +58,4 @@ endif
 # Copy galaxys specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

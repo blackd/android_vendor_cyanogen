@@ -2,10 +2,10 @@
 $(call inherit-product, device/htc/buzz/buzz.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
@@ -21,30 +21,30 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_buzz BUILD_ID=GRI40 BUILD_DISPL
 PRODUCT_LOCALES += ldpi mdpi
 
 # Extra overlay for LDPI
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/ldpi
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 # Copy bootanimation
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-buzz
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-buzz
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-buzz
+            ro.modversion=pffmod-7.1.0-RC0-buzz
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-buzz-KANG
+            ro.modversion=pffmod-7.1.0-RC0-buzz-KANG
     endif
 endif

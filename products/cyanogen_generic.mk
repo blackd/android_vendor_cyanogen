@@ -2,7 +2,7 @@
 $(call inherit-product, build/target/product/full.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
@@ -10,8 +10,8 @@ $(call inherit-product, vendor/cyanogen/products/common_full.mk)
 PRODUCT_NAME := cyanogen_generic
 PRODUCT_BRAND := cyanogenmod
 PRODUCT_DEVICE := generic
-PRODUCT_MODEL := CyanogenMod
-PRODUCT_MANUFACTURER := CyanogenMod
+PRODUCT_MODEL := pffmod
+PRODUCT_MANUFACTURER := pffmod
 
 #
 # Move dalvik cache to data partition where there is more room to solve startup problems
@@ -19,4 +19,4 @@ PRODUCT_MANUFACTURER := CyanogenMod
 PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dexopt-data-only=1
 
 # Generic modversion
-ro.modversion=CyanogenMod-7
+ro.modversion=pffmod-7

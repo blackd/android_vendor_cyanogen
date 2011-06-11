@@ -1,7 +1,7 @@
 $(call inherit-product, device/htc/inc/inc.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
@@ -16,27 +16,27 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=GRJ22 PRODUCT_NA
 PRODUCT_PROPERTY_OVERRIDES += ro.product.version=3.26.605.1
 
 # Extra Passion overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/inc
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/inc
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Inc
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Inc
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Inc
+            ro.modversion=pffmod-7.1.0-RC0-Inc
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC0-Inc-KANG
+            ro.modversion=pffmod-7.1.0-RC0-Inc-KANG
     endif
 endif
 
@@ -44,4 +44,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

@@ -1,7 +1,7 @@
 # Inherit common CM stuff
-$(call inherit-product, vendor/cyanogen/products/common.mk)
+$(call inherit-product, vendor/pffmod/products/common.mk)
 
-# CyanogenMod specific product packages
+# pffmod specific product packages
 PRODUCT_PACKAGES += \
     CMWallpapers
 
@@ -9,10 +9,10 @@ PRODUCT_PACKAGES += \
 include frameworks/base/data/sounds/AllAudio.mk
 
 # Theme packages
-include vendor/cyanogen/products/themes.mk
+include vendor/pffmod/products/themes.mk
 
 # Include extra dictionaries for LatinIME
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/dictionaries
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
