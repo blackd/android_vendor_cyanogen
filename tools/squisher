@@ -33,14 +33,14 @@ if [ ! -f "$OTAPACKAGE" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/cyanogen/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/pffmod/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
 
 # Some products want a squashfs for xbin for space
 case "$TARGET_PRODUCT" in
-	cyanogen_dream_sapphire) WANT_SQUASHFS=1 ;;
+	pffmod_dream_sapphire) WANT_SQUASHFS=1 ;;
 	*) WANT_SQUASHFS=0 ;;
 esac
 
@@ -138,7 +138,7 @@ find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-str
 
 # Determine what to name the new signed package
 if [ -z "$CYANOGEN_NIGHTLY" ]; then
-	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*CyanogenMod-//p' $REPACK/ota/system/build.prop`
+	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*pffmod-//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
 	OUTFILE=$OUT/update-cm-$MODVERSION-signed.zip
 else
