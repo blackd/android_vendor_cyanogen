@@ -1,7 +1,7 @@
 # Inherit device configuration
 $(call inherit-product, device/lge/p990/p990.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_p990
+PRODUCT_NAME := pffmod_p990
 PRODUCT_BRAND := lge
 PRODUCT_DEVICE := p990
 PRODUCT_MODEL := Optimus 2X

@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for liberty.
 $(call inherit-product, device/htc/liberty/liberty.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_liberty
+PRODUCT_NAME := pffmod_liberty
 PRODUCT_BRAND := htc
 PRODUCT_DEVICE := liberty
 PRODUCT_MODEL := Liberty

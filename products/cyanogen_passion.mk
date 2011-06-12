@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for passion.
 $(call inherit-product, device/htc/passion/full_passion.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_passion
+PRODUCT_NAME := pffmod_passion
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := passion
 PRODUCT_MODEL := Nexus One

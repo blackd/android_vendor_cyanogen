@@ -1,13 +1,13 @@
 # Inherit AOSP device configuration for encore.
 $(call inherit-product, device/bn/encore/encore.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_encore
+PRODUCT_NAME := pffmod_encore
 PRODUCT_BRAND := bn
 PRODUCT_DEVICE := encore
 PRODUCT_MODEL := NookColor

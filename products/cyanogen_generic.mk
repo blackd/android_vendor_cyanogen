@@ -1,14 +1,14 @@
 # Inherit AOSP device configuration for generic target
 $(call inherit-product, build/target/product/full.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_generic
-PRODUCT_BRAND := cyanogenmod
+PRODUCT_NAME := pffmod_generic
+PRODUCT_BRAND := pffmod
 PRODUCT_DEVICE := generic
 PRODUCT_MODEL := pffmod
 PRODUCT_MANUFACTURER := pffmod

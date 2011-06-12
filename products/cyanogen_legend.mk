@@ -1,14 +1,14 @@
 # Inherit AOSP device configuration for legend.
 $(call inherit-product, device/htc/legend/legend.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
 $(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 
-PRODUCT_NAME := cyanogen_legend
+PRODUCT_NAME := pffmod_legend
 PRODUCT_BRAND := htc
 PRODUCT_DEVICE := legend
 PRODUCT_MODEL := Legend

@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for desirec.
 $(call inherit-product, device/htc/desirec/device_desirec.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Inherit apns list from common
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_desirec
+PRODUCT_NAME := pffmod_desirec
 PRODUCT_BRAND := verizon
 PRODUCT_DEVICE := desirec
 PRODUCT_MODEL := ERIS

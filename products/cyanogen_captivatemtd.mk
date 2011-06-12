@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for captivate.
 $(call inherit-product, device/samsung/captivatemtd/full_captivatemtd.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_captivatemtd
+PRODUCT_NAME := pffmod_captivatemtd
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := captivatemtd
 PRODUCT_MODEL := SGH-I897

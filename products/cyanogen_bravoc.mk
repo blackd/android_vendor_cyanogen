@@ -1,13 +1,13 @@
 # Inherit AOSP device configuration for bravoc.
 $(call inherit-product, device/htc/bravoc/full_bravoc.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_bravoc
+PRODUCT_NAME := pffmod_bravoc
 PRODUCT_BRAND := us_cellular_wwe
 PRODUCT_DEVICE := bravoc
 PRODUCT_MODEL := HTC Desire CDMA

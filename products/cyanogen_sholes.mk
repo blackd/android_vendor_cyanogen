@@ -1,13 +1,13 @@
 # Inherit AOSP device configuration for passion.
 $(call inherit-product, device/motorola/sholes/sholes.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_sholes
+PRODUCT_NAME := pffmod_sholes
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := sholes
 PRODUCT_MODEL := Droid

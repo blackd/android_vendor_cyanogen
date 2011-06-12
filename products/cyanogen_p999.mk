@@ -1,7 +1,7 @@
 # Inherit device configuration for p999.
 $(call inherit-product, device/lge/p999/p999.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_p999
+PRODUCT_NAME := pffmod_p999
 PRODUCT_BRAND := lge
 PRODUCT_DEVICE := p999
 PRODUCT_MODEL := LG-P999

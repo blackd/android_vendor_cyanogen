@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for vibrantmtd.
 $(call inherit-product, device/samsung/vibrantmtd/full_vibrantmtd.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_vibrantmtd
+PRODUCT_NAME := pffmod_vibrantmtd
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := vibrantmtd
 PRODUCT_MODEL := SGH-T959

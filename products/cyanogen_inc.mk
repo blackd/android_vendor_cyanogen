@@ -1,12 +1,12 @@
 $(call inherit-product, device/htc/inc/inc.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_inc
+PRODUCT_NAME := pffmod_inc
 PRODUCT_BRAND := htc
 PRODUCT_DEVICE := inc
 PRODUCT_MODEL := Incredible

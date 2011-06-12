@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for click.
 $(call inherit-product, device/htc/click/click.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -16,7 +16,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=device/htc/click/kernel
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_click
+PRODUCT_NAME := pffmod_click
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := click
 PRODUCT_MODEL := HTC click

@@ -1,14 +1,14 @@
 # Inherit AOSP device configuration for heroc.
 $(call inherit-product, device/htc/heroc/heroc.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_heroc
+PRODUCT_NAME := pffmod_heroc
 PRODUCT_BRAND := sprint
 PRODUCT_DEVICE := heroc
 PRODUCT_MODEL := HERO200

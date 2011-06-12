@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for speedy.
 $(call inherit-product, device/htc/speedy/speedy.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Inherit WiMAX stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/wimax.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_speedy
+PRODUCT_NAME := pffmod_speedy
 PRODUCT_BRAND := sprint
 PRODUCT_DEVICE := speedy
 PRODUCT_MODEL := PG06100

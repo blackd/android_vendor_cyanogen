@@ -1,13 +1,13 @@
 # Inherit device configuration for mecha.
 $(call inherit-product, device/htc/mecha/device_mecha.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_mecha
+PRODUCT_NAME := pffmod_mecha
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := mecha
 PRODUCT_MODEL := ThunderBolt

@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for leo.
 $(call inherit-product, device/htc/leo/full_leo.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -11,7 +11,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 # Setup device specific product configuration.
 #
 
-PRODUCT_NAME := cyanogen_leo
+PRODUCT_NAME := pffmod_leo
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := leo
 PRODUCT_MODEL := HTC HD2

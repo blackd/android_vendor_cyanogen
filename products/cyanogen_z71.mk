@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for z71.
 $(call inherit-product, device/commtiva/z71/device_z71.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_z71
+PRODUCT_NAME := pffmod_z71
 PRODUCT_BRAND := commtiva
 PRODUCT_DEVICE := z71
 PRODUCT_MODEL := Z71

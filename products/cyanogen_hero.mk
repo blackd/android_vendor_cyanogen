@@ -5,7 +5,7 @@ else
 $(call inherit-product, device/htc/hero/full_hero.mk)
 endif
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -14,7 +14,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_hero
+PRODUCT_NAME := pffmod_hero
 PRODUCT_BRAND := htc
 PRODUCT_DEVICE := hero
 PRODUCT_MODEL := Hero

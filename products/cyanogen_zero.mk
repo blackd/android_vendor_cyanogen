@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for zero.
 $(call inherit-product, device/geeksphone/zero/zero.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_zero
+PRODUCT_NAME := pffmod_zero
 PRODUCT_BRAND := geeksphone
 PRODUCT_DEVICE := zero
 PRODUCT_MODEL := Geeksphone ZERO

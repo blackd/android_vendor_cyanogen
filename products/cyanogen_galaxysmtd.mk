@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for galaxys.
 $(call inherit-product, device/samsung/galaxysmtd/full_galaxysmtd.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_galaxysmtd
+PRODUCT_NAME := pffmod_galaxysmtd
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := galaxysmtd
 PRODUCT_MODEL := GT-I9000

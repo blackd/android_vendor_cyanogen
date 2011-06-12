@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for dream_sapphire.
 $(call inherit-product, device/huawei/u8220/device_u8220.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common.mk)
 
 # Include GSM-only stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_u8220
+PRODUCT_NAME := pffmod_u8220
 PRODUCT_BRAND := huawei
 PRODUCT_DEVICE := u8220
 PRODUCT_MODEL := U8220/U8230

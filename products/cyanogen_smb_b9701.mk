@@ -1,12 +1,12 @@
 $(call inherit-product, device/malata/smb_b9701/smb_b9701.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_smb_b9701
+PRODUCT_NAME := pffmod_smb_b9701
 PRODUCT_BRAND := nvidia
 PRODUCT_DEVICE := smb_b9701
 PRODUCT_MODEL := Zpad-T8

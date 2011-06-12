@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for buzz.
 $(call inherit-product, device/htc/buzz/buzz.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_buzz
+PRODUCT_NAME := pffmod_buzz
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := buzz
 PRODUCT_MODEL := HTC Wildfire

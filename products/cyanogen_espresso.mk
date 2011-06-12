@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for espresso.
 $(call inherit-product, device/htc/espresso/espresso.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_espresso
+PRODUCT_NAME := pffmod_espresso
 PRODUCT_BRAND := tmobile
 PRODUCT_DEVICE := espresso
 PRODUCT_MODEL := T-Mobile myTouch 3G Slide

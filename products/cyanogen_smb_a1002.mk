@@ -1,12 +1,12 @@
 $(call inherit-product, device/malata/smb_a1002/smb_a1002.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_smb_a1002
+PRODUCT_NAME := pffmod_smb_a1002
 PRODUCT_BRAND := nvidia
 PRODUCT_DEVICE := smb_a1002
 PRODUCT_MODEL := GTablet

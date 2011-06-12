@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for geeksphone one.
 $(call inherit-product, device/geeksphone/one/one.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_one
+PRODUCT_NAME := pffmod_one
 PRODUCT_BRAND := geeksphone
 PRODUCT_DEVICE := one
 PRODUCT_MODEL := Geeksphone ONE

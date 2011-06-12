@@ -1,7 +1,7 @@
 # Inherit device configuration for vision.
 $(call inherit-product, device/htc/vision/vision.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,7 +10,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_vision
+PRODUCT_NAME := pffmod_vision
 PRODUCT_BRAND := tmobile
 PRODUCT_DEVICE := vision
 PRODUCT_MODEL := HTC Vision

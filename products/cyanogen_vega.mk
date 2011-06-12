@@ -1,12 +1,12 @@
 $(call inherit-product, device/advent/vega/vega.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_vega
+PRODUCT_NAME := pffmod_vega
 PRODUCT_BRAND := advent
 PRODUCT_DEVICE := vega
 PRODUCT_MODEL := Vega

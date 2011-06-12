@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for zeppelin.
 $(call inherit-product, device/motorola/morrison/morrison.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 $(call inherit-product vendor/pffmod/products/bcm_fm_radio.mk)
@@ -11,7 +11,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_morrison
+PRODUCT_NAME := pffmod_morrison
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := morrison
 PRODUCT_MODEL := CLIQ

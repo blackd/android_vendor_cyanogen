@@ -1,13 +1,13 @@
 # Inherit AOSP device configuration for crespo.
 $(call inherit-product, device/samsung/crespo4g/full_crespo4g.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_crespo4g
+PRODUCT_NAME := pffmod_crespo4g
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := crespo4g
 PRODUCT_MODEL := Nexus S 4G

@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for blade.
 $(call inherit-product, device/zte/blade/device_blade.mk)
 
-# Inherit some common cyanogenmod stuff.
+# Inherit some common pffmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
@@ -10,12 +10,12 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_blade
+PRODUCT_NAME := pffmod_blade
 PRODUCT_BRAND := zte
 PRODUCT_DEVICE := blade
 PRODUCT_MODEL := Blade
 PRODUCT_MANUFACTURER := ZTE
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=cyanogen_blade BUILD_ID=FRG83 BUILD_DISPLAY_ID=GRJ22 BUILD_FINGERPRINT=google/passion/passion:2.3.3/GRI40/102588:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.3 GRI40 102588 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=pffmod_blade BUILD_ID=FRG83 BUILD_DISPLAY_ID=GRJ22 BUILD_FINGERPRINT=google/passion/passion:2.3.3/GRI40/102588:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.3 GRI40 102588 release-keys"
 
 #
 # Set ro.modversion
