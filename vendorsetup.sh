@@ -9,14 +9,18 @@ add_lunch_combo pffmod_crespo-eng
 add_lunch_combo pffmod_crespo4g-eng
 add_lunch_combo pffmod_desirec-eng
 add_lunch_combo pffmod_dream_sapphire-eng
+add_lunch_combo pffmod_droid2-eng
 add_lunch_combo pffmod_encore-eng
 add_lunch_combo pffmod_espresso-eng
+add_lunch_combo pffmod_fascinatemtd-eng
+add_lunch_combo pffmod_galaxys2-eng
 add_lunch_combo pffmod_galaxysmtd-eng
 add_lunch_combo pffmod_generic-eng
 add_lunch_combo pffmod_glacier-eng
 add_lunch_combo pffmod_hero-eng
 add_lunch_combo pffmod_heroc-eng
 add_lunch_combo pffmod_inc-eng
+add_lunch_combo pffmod_jordan-eng
 add_lunch_combo pffmod_legend-eng
 add_lunch_combo pffmod_leo-eng
 add_lunch_combo pffmod_liberty-eng
@@ -26,6 +30,7 @@ add_lunch_combo pffmod_one-eng
 add_lunch_combo pffmod_p990-eng
 add_lunch_combo pffmod_p999-eng
 add_lunch_combo pffmod_passion-eng
+add_lunch_combo pffmod_shadow-eng
 add_lunch_combo pffmod_sholes-eng
 add_lunch_combo pffmod_smb_a1002-eng
 add_lunch_combo pffmod_smb_a1004-eng
@@ -37,8 +42,9 @@ add_lunch_combo pffmod_u8220-eng
 add_lunch_combo pffmod_vega-eng
 add_lunch_combo pffmod_vibrantmtd-eng
 add_lunch_combo pffmod_vision-eng
+add_lunch_combo pffmod_vivo-eng
+add_lunch_combo pffmod_vivow-eng
 add_lunch_combo pffmod_z71-eng
 add_lunch_combo pffmod_zeppelin-eng
 add_lunch_combo pffmod_zero-eng
 
-PATH=$PATH:$PWD/vendor/pffmod/tools ; export PATH

@@ -44,10 +44,10 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-Captivate
+            ro.modversion=pffmod-7.1.0-RC1-Captivate
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-Captivate-KANG
+            ro.modversion=pffmod-7.1.0-RC1-Captivate-KANG
     endif
 endif
 

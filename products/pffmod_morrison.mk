@@ -14,7 +14,7 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 PRODUCT_NAME := pffmod_morrison
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := morrison
-PRODUCT_MODEL := CLIQ
+PRODUCT_MODEL := MB200
 PRODUCT_MANUFACTURER := Motorola
 
 #
@@ -26,10 +26,10 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-RC0-CLIQ-KANG
+            ro.modversion=pffmod-7.1.0-RC1-CLIQ-KANG
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-RC0-CLIQ-KANG
+            ro.modversion=pffmod-7.1.0-RC1-CLIQ-KANG
     endif
 endif
 

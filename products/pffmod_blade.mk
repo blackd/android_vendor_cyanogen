@@ -26,10 +26,10 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-RC0-Blade
+            ro.modversion=pffmod-7.1.0-RC1-Blade
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-RC0-Blade-KANG
+            ro.modversion=pffmod-7.1.0-RC1-Blade-KANG
     endif
 endif
 
