@@ -2,12 +2,12 @@
 $(call inherit-product, device/htc/vivow/vivow.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_vivow
+PRODUCT_NAME := pffmod_vivow
 PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := vivow
 PRODUCT_MODEL := Incredible 2
@@ -20,7 +20,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_vivow BUILD_ID=GRI40 BUILD_DISP
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_vivow_defconfig
 
 # Extra vivow overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/vivow
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/vivow
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
@@ -29,21 +29,21 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_PACKAGES += AicBootFix
 
 # Broadcom FM radio
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Inc2
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Inc2
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-Beta1-Inc2
+            ro.modversion=pffmod-7.1.0-Beta1-Inc2
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC1-Beta1-Inc2-KANG
+            ro.modversion=pffmod-7.1.0-RC1-Beta1-Inc2-KANG
     endif
 endif
 
@@ -51,4 +51,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

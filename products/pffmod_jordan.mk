@@ -2,12 +2,12 @@
 $(call inherit-product, device/motorola/jordan/jordan.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_jordan
+PRODUCT_NAME := pffmod_jordan
 PRODUCT_BRAND := MOTO
 PRODUCT_DEVICE := jordan
 PRODUCT_MODEL := MB525
@@ -20,14 +20,14 @@ PRODUCT_SFX := RTGB
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%y%m%d-%H%M)-NIGHTLY-Jordan
+        ro.modversion=pffmod-7-$(shell date +%y%m%d-%H%M)-NIGHTLY-Jordan
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC1-jordan
+            ro.modversion=pffmod-7.1.0-RC1-jordan
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-RC1-jordan
+            ro.modversion=pffmod-7.1.0-RC1-jordan
     endif
 endif
 
@@ -48,18 +48,18 @@ TARGET_BUILD_TYPE=user \
 USER=CyanogenDefy
 
 PRODUCT_COPY_FILES += \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/cyanogen/overlay/jordan
+    vendor/pffmod/overlay/jordan
 
 # Add the Torch app
 PRODUCT_PACKAGES += \
     Torch
 
 # for custom apns-conf.xml
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 # TI FM radio
-$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+$(call inherit-product, vendor/pffmod/products/ti_fm_radio.mk)
 
