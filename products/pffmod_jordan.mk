@@ -2,7 +2,7 @@
 $(call inherit-product, device/motorola/jordan/jordan.mk)
 
 # Inherit common GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/pffmod/products/common_full.mk)
@@ -48,7 +48,7 @@ PRIVATE_BUILD_DESC="umts_jordan-user 2.3.7 ${PRODUCT_SFX}_${PRODUCT_SBF} ${UTC_D
 BUILD_NUMBER=${DATE} \
 BUILD_VERSION_TAGS=release-keys \
 TARGET_BUILD_TYPE=user \
-USER=CyanogenDefy
+USER=pffmodDefy
 
 PRODUCT_COPY_FILES += \
     vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

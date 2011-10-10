@@ -2,15 +2,15 @@
 $(call inherit-product, device/semc/robyn/device_robyn.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_robyn
+PRODUCT_NAME := pffmod_robyn
 PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := robyn
 PRODUCT_MODEL := E10i
@@ -24,24 +24,24 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_LOCALES += ldpi mdpi
 
 # Extra overlay for LDPI
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/ldpi
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/ldpi
 
 # Ti FM radio
-#$(call inherit-product, vendor/cyanogen/products/ti_fm_radio.mk)
+#$(call inherit-product, vendor/pffmod/products/ti_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-X10Mini
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-X10Mini
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-X10Mini
+            ro.modversion=pffmod-7.1.0-X10Mini
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-X10Mini-KANG
+            ro.modversion=pffmod-7.1.0-X10Mini-KANG
     endif
 endif
 
@@ -49,4 +49,4 @@ endif
 # Copy MDPI specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/ldpi/media/bootanimation.zip:system/media/bootanimation.zip

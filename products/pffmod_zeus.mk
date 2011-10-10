@@ -2,15 +2,15 @@
 $(call inherit-product, device/semc/zeus/device_zeus.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_zeus
+PRODUCT_NAME := pffmod_zeus
 PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := zeus
 PRODUCT_MODEL := R800i
@@ -23,28 +23,28 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=Play BUILD_ID=3.0.1.A.0.145 BUILD_D
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_zeus_defconfig
 
 # Extra zeus overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/zeus
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/zeus
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 
 # BCM FM radio
-#$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+#$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-XperiaPlay-R800i
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-XperiaPlay-R800i
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-XperiaPlay-R800i
+            ro.modversion=pffmod-7.1.0-XperiaPlay-R800i
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-XperiaPlay-R800i-KANG
+            ro.modversion=pffmod-7.1.0-XperiaPlay-R800i-KANG
     endif
 endif
 
@@ -52,4 +52,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

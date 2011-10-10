@@ -2,15 +2,15 @@
 $(call inherit-product, device/semc/es209ra/device_es209ra.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_es209ra
+PRODUCT_NAME := pffmod_es209ra
 PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := es209ra
 PRODUCT_MODEL := X10i
@@ -25,14 +25,14 @@ PRODUCT_PACKAGES += Torch
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-es209ra
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-es209ra
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-es209ra
+            ro.modversion=pffmod-7.1.0-es209ra
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-es209ra-KANG
+            ro.modversion=pffmod-7.1.0-es209ra-KANG
     endif
 endif
 
@@ -40,4 +40,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

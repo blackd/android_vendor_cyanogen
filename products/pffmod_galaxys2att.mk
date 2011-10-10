@@ -2,15 +2,15 @@
 $(call inherit-product, device/samsung/galaxys2att/full_galaxys2att.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_galaxys2att
+PRODUCT_NAME := pffmod_galaxys2att
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := galaxys2att
 PRODUCT_MODEL := SGH-I777
@@ -18,7 +18,7 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-I777 BUILD_ID=GWK74 BUILD_DISPLAY_ID=GWK74 BUILD_FINGERPRINT=samsung/SGH-I777/SGH-I777:2.3.7/GINGERBREAD/UCKH7:user/release-keys PRIVATE_BUILD_DESC="SGH-I777-user 2.3.7 GINGERBREAD UCKH7 release-keys"
 
 # Extra captivate overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/galaxys2att
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/galaxys2att
 
 # Add FM and Torch Apps
 PRODUCT_PACKAGES += \
@@ -41,14 +41,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-Galaxys2ATT
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-Galaxys2ATT
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-Galaxys2ATT
+            ro.modversion=pffmod-7.1.0-Galaxys2ATT
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-Galaxys2ATT-KANG
+            ro.modversion=pffmod-7.1.0-Galaxys2ATT-KANG
     endif
 endif
 
@@ -56,4 +56,4 @@ endif
 # Copy captivate specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip

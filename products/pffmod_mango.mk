@@ -2,15 +2,15 @@
 $(call inherit-product, device/semc/mango/device_mango.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_mango
+PRODUCT_NAME := pffmod_mango
 PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := mango
 PRODUCT_MODEL := SK17i
@@ -23,28 +23,28 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SK17i BUILD_ID=4.0.A.2.368 BUILD_DI
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_mango_defconfig
 
 # Extra mango overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/mango
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/mango
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 
 # BCM FM radio
-#$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+#$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-XperiaMiniPro-SK17i
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-XperiaMiniPro-SK17i
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-XperiaMiniPro-SK17i
+            ro.modversion=pffmod-7.1.0-XperiaMiniPro-SK17i
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-XperiaMiniPro-SK17i-KANG
+            ro.modversion=pffmod-7.1.0-XperiaMiniPro-SK17i-KANG
     endif
 endif
 
@@ -52,4 +52,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip

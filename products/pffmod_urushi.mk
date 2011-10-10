@@ -2,15 +2,15 @@
 $(call inherit-product, device/semc/urushi/device_urushi.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/pffmod/products/common_full.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+$(call inherit-product, vendor/pffmod/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_urushi
+PRODUCT_NAME := pffmod_urushi
 PRODUCT_BRAND := SEMC
 PRODUCT_DEVICE := urushi
 PRODUCT_MODEL := ST18i
@@ -23,28 +23,28 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=ST18i BUILD_ID=4.0.A.2.368 BUILD_DI
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_urushi_defconfig
 
 # Extra urushi overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/urushi
+PRODUCT_PACKAGE_OVERLAYS += vendor/pffmod/overlay/urushi
 
 # Add the Torch app
 PRODUCT_PACKAGES += Torch
 
 
 # BCM FM radio
-#$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+#$(call inherit-product, vendor/pffmod/products/bcm_fm_radio.mk)
 
 #
 # Set ro.modversion
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-XperiaRay-ST18i
+        ro.modversion=pffmod-7-$(shell date +%m%d%Y)-NIGHTLY-XperiaRay-ST18i
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-XperiaRay-ST18i
+            ro.modversion=pffmod-7.1.0-XperiaRay-ST18i
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-XperiaRay-ST18i-KANG
+            ro.modversion=pffmod-7.1.0-XperiaRay-ST18i-KANG
     endif
 endif
 
@@ -52,4 +52,4 @@ endif
 # Copy passion specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/pffmod/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip
