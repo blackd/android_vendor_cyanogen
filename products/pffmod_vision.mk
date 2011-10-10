@@ -11,11 +11,11 @@ $(call inherit-product, vendor/pffmod/products/gsm.mk)
 # Setup device specific product configuration.
 #
 PRODUCT_NAME := pffmod_vision
-PRODUCT_BRAND := tmobile
+PRODUCT_BRAND := htc_wwe
 PRODUCT_DEVICE := vision
 PRODUCT_MODEL := HTC Vision
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_vision BUILD_ID=FRF91 BUILD_DISPLAY_ID=GRJ22 BUILD_FINGERPRINT=tmobile/htc_vision/vision/vision:2.2/FRF91/277427:user/release-keys PRIVATE_BUILD_DESC="1.22.531.8 CL277427 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_vision BUILD_ID=GRI40 BUILD_DISPLAY_ID=GWK74 BUILD_FINGERPRINT=htc_wwe/htc_vision/vision:2.3.3/GRI40/84109:user/release-keys PRIVATE_BUILD_DESC="2.42.405.2 CL84109 release-keys"
 
 PRODUCT_SPECIFIC_DEFINES = WEBCORE_ACCELERATED_SCROLLING=true
 
@@ -45,10 +45,10 @@ ifdef CYANOGEN_NIGHTLY
 else
     ifdef CYANOGEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-RC1-vision
+            ro.modversion=pffmod-7.1.0-vision
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=pffmod-7.1.0-RC1-vision-KANG
+            ro.modversion=pffmod-7.1.0-vision-KANG
     endif
 endif
 

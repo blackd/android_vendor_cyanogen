@@ -24,9 +24,9 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 fi
 
 if [ "$TARGET_BUILD_TYPE" = "debug" ]; then
-    OTAPACKAGE=$OUT/${TARGET_PRODUCT}_debug-ota-$TARGET_BUILD_VARIANT.$LOGNAME.zip
+    OTAPACKAGE=$OUT/${TARGET_PRODUCT}_debug-ota-$TARGET_BUILD_VARIANT.$USER.zip
 else
-    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$LOGNAME.zip
+    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$USER.zip
 fi
 if [ ! -f "$OTAPACKAGE" ]; then
 	echo "$OTAPACKAGE doesn't exist!";
@@ -134,7 +134,8 @@ $SED -i \
 rm -rf $REPACK/ota/recovery
 
 # Strip modules
-find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
+[ -d $REPACK/ota/system/lib/modules ] && \
+	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
 if [ -z "$CYANOGEN_NIGHTLY" ]; then
