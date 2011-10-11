@@ -2,8 +2,8 @@
 $(call inherit-product, vendor/pffmod/products/common.mk)
 
 # pffmod specific product packages
-PRODUCT_PACKAGES += \
-    CMWallpapers
+#PRODUCT_PACKAGES += \
+#    CMWallpapers
 
 # Bring in all audio files
 include frameworks/base/data/sounds/AllAudio.mk

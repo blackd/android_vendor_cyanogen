@@ -35,8 +35,6 @@ PRODUCT_PACKAGES += \
     AndroidTerm \
     FileManager \
     CMParts \
-    CMStats \
-    CMUpdateNotify \
     DSPManager \
     libcyanogen-dsp \
     Pacman \
