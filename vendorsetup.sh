@@ -36,6 +36,7 @@ add_lunch_combo pffmod_mimmi-eng
 add_lunch_combo pffmod_morrison-eng
 add_lunch_combo pffmod_motus-eng
 add_lunch_combo pffmod_one-eng
+add_lunch_combo pffmod_olympus-eng
 add_lunch_combo pffmod_p990-eng
 add_lunch_combo pffmod_p999-eng
 add_lunch_combo pffmod_passion-eng

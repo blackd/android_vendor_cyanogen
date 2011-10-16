@@ -37,6 +37,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/pffmod_morrison.mk \
     $(LOCAL_DIR)/pffmod_motus.mk \
     $(LOCAL_DIR)/pffmod_one.mk \
+    $(LOCAL_DIR)/pffmod_olympus.mk \
     $(LOCAL_DIR)/pffmod_p990.mk \
     $(LOCAL_DIR)/pffmod_p999.mk \
     $(LOCAL_DIR)/pffmod_passion.mk \
